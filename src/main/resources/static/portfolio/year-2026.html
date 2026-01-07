@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 포트폴리오</title>
+  <meta name="description" content="2026년 프로젝트와 성과 요약" />
+  <link rel="stylesheet" href="./assets/css/base.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#content">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="site-brand"><a href="./index.html">Portfolio</a></p>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="./index.html">Years</a>
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <nav aria-label="빵부스러기" class="breadcrumb">
+      <a href="./index.html">Years</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">2026</span>
+    </nav>
+
+    <header class="page-header">
+      <h1>2026</h1>
+      <p class="lead">올해의 핵심 프로젝트와 성과를 요약합니다.</p>
+    </header>
+
+    <!-- 연도 요약 -->
+    <section aria-labelledby="summary-title" class="summary">
+      <h2 id="summary-title">Summary</h2>
+
+      <div class="summary-grid">
+        <div class="summary-card">
+          <h3>핵심 성과</h3>
+          <ul>
+            <li>배포 자동화/운영 안정성 개선</li>
+            <li>로그/모니터링 체계 정리</li>
+            <li>성능 병목 구간 개선(쿼리/캐시 등)</li>
+          </ul>
+        </div>
+
+        <div class="summary-card">
+          <h3>Tech Stack</h3>
+          <ul class="tag-list" aria-label="기술 태그">
+            <li class="tag">Java</li>
+            <li class="tag">Spring Boot</li>
+            <li class="tag">JPA</li>
+            <li class="tag">MariaDB</li>
+			<li class="tag">MSSQL</li>
+            <li class="tag">AWS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 프로젝트 목록 -->
+    <section aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+
+      <div class="project-list">
+        <article class="project-card" data-type="backend" data-skill="spring,jpa,aws">
+          <header class="project-card__header">
+            <h3 class="project-card__title">
+              LG CHEM 유트로핀 (서비스 제작)
+            </h3>
+            <p class="project-card__meta">
+              <time datetime="2026-01">2026.01</time> – <time datetime="2026-03">2026.03</time>
+              · Role: Backend
+            </p>
+          </header>
+
+          <p class="project-card__desc">
+            회원/관리자 기능 개선, 인증/인가 구조 정리, 운영 배포 파이프라인 개선.
+          </p>
+
+          <ul class="project-card__bullets">
+            <li>JWT/Session 전략 재정립, 보안 점검 항목 대응</li>
+            <li>JPA 쿼리 최적화 및 인덱스 튜닝</li>
+            <li>에러 로깅/모니터링 기준 정리</li>
+          </ul>
+
+          <footer class="project-card__footer">
+            <a class="btn" href="./projects/project-a.html">상세 보기</a>
+            <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">Repo</a>
+          </footer>
+        </article>
+
+        <article class="project-card" data-type="infra" data-skill="aws,ci-cd">
+          <header class="project-card__header">
+            <h3 class="project-card__title">LG CHEM 유트로핀 (서비스 고도화)</h3>
+            <p class="project-card__meta">
+              <time datetime="2026-04">2026.04</time> – <time datetime="2026-06">2026.06</time>
+              · Role: DevOps/Backend
+            </p>
+          </header>
+
+          <p class="project-card__desc">
+            AWS 환경에서 포트폴리오 서비스 배포 표준화 및 운영 비용 최소화.
+          </p>
+
+          <ul class="project-card__bullets">
+            <li>환경변수/시크릿 관리 체계 정리</li>
+            <li>배포 단순화(롤백/버전 태깅)</li>
+          </ul>
+
+          <footer class="project-card__footer">
+            <a class="btn" href="./projects/project-b.html">상세 보기</a>
+          </footer>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2026 Portfolio</small>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* base.css */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif; line-height: 1.55; }
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { width: min(100%, 980px); margin: 0 auto; padding: 0 16px; }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+}
+.skip-link:focus {
+  left: 16px; top: 16px; background: #fff; padding: 8px 12px; border: 1px solid #000;
+}
+
+.year-card__link .year-card__desc {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.site-header, .site-footer { border-bottom: 1px solid #e5e5e5; }
+.site-footer { border-top: 1px solid #e5e5e5; border-bottom: 0; margin-top: 48px; padding: 24px 0; }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; padding: 16px; }
+.site-brand { margin: 0; font-weight: 700; }
+.site-nav a { margin-left: 12px; padding: 6px 8px; }
+.page-header { padding: 24px 0 12px; }
+.lead { margin: 8px 0 0; opacity: .85; }
+
+.year-grid { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.year-card { border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden; }
+.year-card__link { display: block; padding: 16px; }
+.year-card__title { margin: 0; font-size: 20px; }
+.year-card__meta, .year-card__desc { margin: 8px 0 0; opacity: .85; }
+
+.summary-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.summary-card { border: 1px solid #e5e5e5; border-radius: 12px; padding: 16px; }
+
+.tag-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { border: 1px solid #e5e5e5; border-radius: 999px; padding: 6px 10px; font-size: 13px; }
+
+.project-list { display: grid; gap: 12px; }
+.project-card { border: 1px solid #e5e5e5; border-radius: 12px; padding: 16px; }
+.project-card__title { margin: 0; font-size: 18px; }
+.project-card__meta { margin: 6px 0 0; opacity: .8; font-size: 14px; }
+.project-card__desc { margin: 12px 0 0; }
+.project-card__bullets { margin: 12px 0 0; padding-left: 18px; }
+.project-card__footer { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+.btn { display: inline-block; border: 1px solid #111; border-radius: 10px; padding: 8px 12px; }
+.btn--ghost { border-color: #e5e5e5; }
+.breadcrumb { margin-top: 16px; opacity: .85; font-size: 14px; }
+
+.year-card--highlight {
+  border-color: #2563eb;           /* blue-600 */
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.06),
+    rgba(37, 99, 235, 0.02)
+  );
+}
+
+
+
+.year-card__link:hover,
+.year-card__link:focus-visible {
+  outline: none;
+}
+
+.year-card--highlight .year-card__link:hover,
+.year-card--highlight .year-card__link:focus-visible {
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.18),
+    rgba(37, 99, 235, 0.08)
+  );
+  box-shadow:
+    0 10px 28px rgba(37, 99, 235, 0.25),
+    0 0 0 2px rgba(37, 99, 235, 0.35);
+  transform: translateY(-2px);
+}
+
+.year-card--highlight .year-card__link:active {
+  transform: translateY(0);
+  background: rgba(37, 99, 235, 0.25);
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.35);
+}
+
+@media (hover: none) {
+  .year-card--highlight .year-card__link:active {
+    background: rgba(37, 99, 235, 0.22);
+  }
+}
+
+.year-grid--compact {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.year-card--simple {
+  padding: 10px;
+}
+
+.year-card--simple .year-card__desc {
+  display: none;
+}
+
+.years-group-title {
+  margin: 32px 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.year-grid--archive .year-card {
+  opacity: 0.85;
+  border-style: dashed;
+}
+
+
+@media (max-width: 480px) {
+  .year-card__desc {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+
